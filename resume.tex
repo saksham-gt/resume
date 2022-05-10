@@ -1,0 +1,166 @@
+\documentclass{article}
+\usepackage{tikz,graphicx}
+\usepackage{fontspec,xcolor,enumitem}
+\usepackage[colorlinks=true,urlcolor=white]{hyperref}
+\usepackage[pass,showframe]{geometry}  %[pass,showframe]     % just to show the page margins
+
+\setmainfont{Ubuntu-Medium}
+\title{\vspace{-3em}}
+
+\newgeometry{top=8mm,bottom=10mm, left=0mm, right=0mm}
+
+\begin{document}
+\newfontfamily\lightfont{Ubuntu-Light}
+\newfontfamily\boldfont{Ubuntu-Bold}
+\newfontfamily\mediumfont{Ubuntu-Medium}
+\newfontfamily\regularfont{Ubuntu-Regular}
+% \newfontfamily\bolditalic{Ubuntu-BoldItalic}
+\newfontfamily\italic{Ubuntu-Italic}
+% \newfontfamily\lightitalic{Ubuntu-LightItalic}
+
+\newcommand{\bulletheading}[1]{\noindent\rule[0.65ex]{4mm}{0.55pt}\hspace{5mm}\boldfont{\large{\textbf{#1}}}}
+\newcommand{\subinfo}[1]{\noindent\italic{\small{#1}}}
+\newcommand{\info}[1]{\regularfont{\large{#1}}}
+\newcommand{\bulletpoint}[1]{\item{\regularfont{\normalsize{#1}}}}
+\newcommand{\sectionheading}[1]{\mediumfont{
+    \vspace{5mm}
+    \hspace{8mm}
+    \textbf{\Large{#1}}\vspace{3.5mm}}}
+
+\newcommand{\ExternalLink}{%
+    \tikz[x=1.2ex, y=1.2ex, baseline=-0.05ex]{% 
+        \begin{scope}[x=1ex, y=1ex]
+            \clip (-0.1,-0.1) 
+                --++ (-0, 1.2) 
+                --++ (0.6, 0) 
+                --++ (0, -0.6) 
+                --++ (0.6, 0) 
+                --++ (0, -1);
+            \path[draw, 
+                line width = 0.5, 
+                rounded corners=0.5] 
+                (0,0) rectangle (1,1);
+        \end{scope}
+        \path[draw, line width = 0.5] (0.5, 0.5) 
+            -- (1, 1);
+        \path[draw, line width = 0.5] (0.6, 1) 
+            -- (1, 1) -- (1, 0.6);
+        }
+    }
+
+\noindent
+    \begin{minipage}[c]{0.20\textwidth} % adapt widths of minipages to your needs
+    \hspace{10mm}
+    \includegraphics[width=3cm]{images/pic_circle.png}
+    \strut\end{minipage}%
+\begin{minipage}[c]{0.79\textwidth} % \begin{minipage}[position][height][inner-pos]{width}
+    \begin{flushleft}
+        \regularfont{\huge{Saksham Gupta}}\\
+        \vspace{0.08cm}
+        \regularfont{\large{\textmd{Flutter Developer @CollAction, GCCF'21 Scholar}}}\\
+        \vspace{0.08cm}
+        \lightfont{\textmd{Flutter Dev $\mid$ Exploring Cloud, Golang, JavaScript $\mid$ Brainstorming Ideas}}
+    \strut\end{flushleft}
+\end{minipage}%
+\hfill\allowbreak
+\vspace{2mm}
+\noindent\fcolorbox{black}{black}{%
+\begin{minipage}{\dimexpr\textwidth-2\fboxrule-2\fboxsep\relax}
+    \hspace{5mm}
+    \begin{minipage}[c]{0.05\textwidth}
+        \includegraphics[height=8mm]{images/mail.png}
+    \end{minipage}%
+    \begin{minipage}[c]{0.45\textwidth}
+        \textcolor{white}{\regularfont{\href{mailto:sakshamgupta391@gmail.com}{\textmd{sakshamgupta391@gmail.com}}}}
+    \end{minipage}%
+    \begin{minipage}[c]{0.05\textwidth}
+        \includegraphics[height=5mm]{images/github.png}
+    \end{minipage}%
+    \begin{minipage}[c]{0.45\textwidth}
+        \textcolor{white}{\regularfont{\href{https://github.com/sudo-saksham}{@sudo-saksham}}}
+    \end{minipage}%
+    \hfill\allowbreak
+    \vspace{1mm}
+    \hspace{4mm}
+    \begin{minipage}[c]{0.05\textwidth}
+        \hspace{2mm}
+        \includegraphics[height=3.5mm]{images/linkedin.png}
+    \end{minipage}%
+    \begin{minipage}[c]{0.45\textwidth}
+        \textcolor{white}{\regularfont{\href{https://www.linkedin.com/in/sudo-saksham/}{/in/sudo-saksham}}}
+    \end{minipage}
+    \hspace{1.5mm}
+    \begin{minipage}[c]{0.04\textwidth}
+        \includegraphics[height=5mm]{images/twitter.png}
+    \end{minipage}%
+    \begin{minipage}[c]{0.45\textwidth}
+        \textcolor{white}{\regularfont{\href{https://twitter.com/sakshamgupta392}{@sakshamgupta392}}}
+        \vspace{1mm}
+    \end{minipage}%
+    \strut\end{minipage}}
+    \begin{minipage}{\textwidth}
+        \noindent\begin{minipage}{0.47\textwidth}
+        \sectionheading{EDUCATION}\\
+            \bulletheading{Bachelor of Technology (B. Tech / B.E.)}\vspace{0.5mm}\\
+            \hspace*{8mm}
+            \info{International Institute of Information \vspace{0.5mm}\\
+            \hspace*{8.5mm}{Technology, Bhubaneswar}}\vspace{1mm}\\
+        \hspace*{8.5mm}{\subinfo{07/2019 - Present}}\hfill{\subinfo{CGPA (as of 6th Sem): 8.28}}\vspace{1.5mm}\\
+        \hspace*{8.5mm}{\subinfo{Courses}}\\
+        \vspace{-3.8mm}
+        \begin{itemize}[topsep=0pt,leftmargin=12mm]
+            \bulletpoint{Computer Science \& Engineering}
+        \end{itemize}
+        \vspace{3mm}
+        \hspace{8mm}
+        {\textbf{\Large{WORK EXPERIENCE}}\vspace{3.5mm}}\\
+        \bulletheading{Flutter Developer (App Developer)}\vspace{1.25mm}\\
+        \hspace*{8mm}
+        \info{Tridhee Technologies Pvt. Ltd.}\vspace{1mm}\\
+        \hspace*{8.5mm}%
+        {\begin{minipage}{0.90\textwidth}
+        {\subinfo{04/2021 - 06/2021}}\hfill{\subinfo{Remote}}\\
+        {\textcolor{gray}{\subinfo{TRIDHEE TECHNOLOGIES incorporated on 04 Feb 2021 is classified 
+        as Private Indian Non-Government Company with authorized capital 
+        share of Rs.1.00 Lac.}}}\vspace{1mm}\\
+        {\subinfo{Achievements/Tasks}}
+        \begin{itemize}[leftmargin=*,topsep=2pt,itemsep=1pt]
+        \bulletpoint{I successfully handled and implemented the design of the
+            mobile application.}
+        \bulletpoint{Developed a map-based mobile application in Flutter with
+        the help of Google Maps.}
+        \bulletpoint{I handled and operated the data from database and
+        managed the state management of the application through
+        Flutter and Google Cloud Platform.}
+        \bulletpoint{\href{https://drive.google.com/file/d/1LG0jbVaUqezFhhA3PtYlIj1mtoMAVpBf/view?usp=sharing}{\textcolor{black}{Internship Completion Certificate. \ExternalLink}}}
+        \end{itemize}
+    \end{minipage}}\vspace{3mm}\\%
+    \bulletheading{Flutter Developer (App Developer)}\vspace{1.25mm}\\
+    \hspace*{8mm}
+    \info{Ether Development}\vspace{1mm}\\
+    \hspace*{8.5mm}%
+    {
+        \begin{minipage}{0.90\textwidth}
+            {\subinfo{01/2022 - 03/2022}}\hfill{\subinfo{Remote}}\\
+        {\subinfo{
+        \textcolor{darkgray}{Released app:-\\
+        \href{https://play.google.com/store/apps/details?id=app.ethersocial.ether&hl=en&gl=US}{\textcolor{black}{Ether: Interests, Dating {\regularfont{for Android} \ExternalLink}}}\\
+        \href{https://apps.apple.com/in/app/ether/id1581824134}{\textcolor{black}{Ether: Interests, Dating {\regularfont{for iOS}} \ExternalLink}}
+        }}}\vspace{1mm}\\
+        {\subinfo{Achievements/Tasks}}
+        \begin{itemize}[leftmargin=*,topsep=2pt,itemsep=1pt]
+            \bulletpoint{Worked exclusively with integrating ChatMessaging via WebSockets using SocketIO library.}
+            \bulletpoint{Worked with Firebase Cloud Messaging for notification.}
+            \bulletpoint{Experience integrating RESTful APIs with Flutter framework.}
+            \bulletpoint{Implemented dynamic UI designs.}
+            \bulletpoint{\href{https://github.com/sudo-saksham/chat_messaging_via_websockets}{\textcolor{black}{Checkout the Demo ChatMessaging Application. \ExternalLink}}}
+        \end{itemize}
+        \end{minipage}}%
+    \strut\end{minipage}%
+    \hspace{0.03\textwidth}
+    \noindent\begin{minipage}[t]{0.47\textwidth}
+        \sectionheading{Open-Source Contributions}\\
+        \bulletheading{CollAction}
+    \end{minipage}%
+    \end{minipage}%
+\end{document}
